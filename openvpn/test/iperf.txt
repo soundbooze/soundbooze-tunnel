@@ -1,0 +1,5 @@
+client
+iperf -c <server> -p 443
+
+server
+iperf -s -p 443

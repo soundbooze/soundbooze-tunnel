@@ -1,0 +1,25 @@
+Fast plain OpenVPN testing
+--------------------------
+
+TCP
+===
+
+Server
+
+openvpn --dev tun0 --ifconfig 10.9.8.1 10.9.8.2 --proto tcp-server --port 80
+
+Client
+
+openvpn --remote 18.136.193.107 --dev tun0 --ifconfig 10.9.8.2 10.9.8.1 --proto tcp-client --port 80
+
+UDP
+===
+
+Server
+
+openvpn --dev tun0 --ifconfig 10.9.8.1 10.9.8.2 --port 500
+
+Client
+
+openvpn --remote 161.189.40.210 --dev tun0 --ifconfig 10.9.8.2 10.9.8.1 --port 500
+
